@@ -4,7 +4,7 @@
 - Touch sensor -> 1
 - Gyroscope -> 2
 - Color sensor -> 3
-- Distance sensor -> 4
+- Ultrasonic sensor -> 4
 - Lifter -> A
 - Left wheel -> B
 - Right wheel -> C
