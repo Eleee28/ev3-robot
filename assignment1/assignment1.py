@@ -5,6 +5,7 @@ from ev3dev2.sensor import INPUT_1, INPUT_2, INPUT_3, INPUT_4
 from ev3dev2.button import Button
 from ev3dev2.display import Display
 import ev3dev2.fonts as fonts
+import time
 
 # Initialize devices
 tank = MoveTank(OUTPUT_B, OUTPUT_C)
@@ -24,7 +25,7 @@ UNIT_DISTANCE = 100
 def display_message(message):
     """Display a message on the EV3 screen"""
     screen.clear()
-    screen.text_grid(message, 3, 3, font=fonts.load('ncenB24')) # we can change colot and font, see docu
+    screen.text_grid(message, 3, 3, font=fonts.load('ncenB18')) # Display message with chosen font
     screen.update()
 
 def wait_for_button_press():
@@ -51,18 +52,18 @@ def turn_degrees(angle):
 
 def move_forward_units(units):
     """Move forward a number of units"""
-    tank.on_for_degrees(50, 50, units * UNIT_DISTANCE)
+    tank.on_for_degrees(50, 50, units * UNIT_DISTANCE) # Move number of units at speed of 50
 
 def move_forward_until_dark():
     """Move forward until color sensor detects dark surface"""
-    tank.on(50, 50) # Move forward, speed: 50 maybe for accuracy put slower pace
+    tank.on(50, 50) # Move forward, speed: 50
     while color.reflected_light_intensity > 5: # Range (0-100), 10 considers floor is dark
         pass
     tank.off() # Stop when obstacle is detected
 
 def move_backward_until_touch():
     """Move Backward until touch sensor is pressed"""
-    tank.on(-30, -30) # Reverse slowly
+    tank.on(-40, -40) # Reverse at slower speed
     while not touch.is_pressed:
         pass
     tank.off()
@@ -78,5 +79,6 @@ move_forward_units(20)
 turn_degrees(-90)
 move_forward_until_dark()
 tank.off()
+time.sleep(1) # Make the stop visual
 turn_degrees(-90)
 move_backward_until_touch()
