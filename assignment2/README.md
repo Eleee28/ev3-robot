@@ -1,6 +1,6 @@
 # Autonomous EV3 Parking Robot
 
-![Demo Video]().
+![Demo Video](img/demo.mp4).
 
 ## Overview
 This project implements an autonomous parking assistant using a LEGO EV3 robot programmed in Python with the `ev3dev2` library. The robot is designed to navigate, detect parking spaces and perform parking maneuvers (perpendicular, parallel and angled), using onboard sensors and motors. It also includes a simple traffic light detection system using the color sensor.
@@ -18,7 +18,10 @@ The EV3 robot includes the following hardware setup:
 
 - **Button Interface:** Used to select parking type and control the flow of the program.
 
-![Robot Build Image]()
+![Robot Build Top Image](img/top.jpeg)
+![Robot Build Front Image](img/front.jpeg)
+![Robot Build Side Image](img/side.jpeg)
+![Robot Build Back Image](img/back.jpeg)
 
 Dimensions and motor characteristics where obtained from official documentation and third-party sources:
 
