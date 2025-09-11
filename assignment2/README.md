@@ -18,10 +18,10 @@ The EV3 robot includes the following hardware setup:
 
 - **Button Interface:** Used to select parking type and control the flow of the program.
 
-![Robot Build Top Image](img/top.jpeg)
-![Robot Build Front Image](img/front.jpeg)
-![Robot Build Side Image](img/side.jpeg)
-![Robot Build Back Image](img/back.jpeg)
+| ROBOT | BUILD |
+|:-------------------------:|:-------------------------:|
+|<img width="1604" alt="Robot Build Front Image" src="https://github.com/Eleee28/ev3-robot/blob/main/assignment2/img/front.jpeg">  FRONT |  <img width="1604" alt="Robot Build Top Image" src="https://github.com/Eleee28/ev3-robot/blob/main/assignment2/img/top.jpeg"> TOP
+|<img width="1604" alt="Robot Build Side Image" src="https://github.com/Eleee28/ev3-robot/blob/main/assignment2/img/side.jpeg"> SIDE | <img width="1604" alt="Robot Build Back Image" src="https://github.com/Eleee28/ev3-robot/blob/main/assignment2/img/back.jpeg"> BACK|
 
 Dimensions and motor characteristics where obtained from official documentation and third-party sources:
 
